@@ -1,4 +1,4 @@
-package orders_test
+package orders
 
 import (
 	"testing"
@@ -6,11 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
 	order_domain "github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
-	"github.com/ttlzx/monolith-microservice-shop/internal/orders/infrastructure/orders"
 )
 
 func TestMemoryRepository(t *testing.T) {
-	repo := orders.NewMemoryRepository()
+	repo := NewMemoryRepository()
 
 	order1 := addOrder(t, repo, "1")
 	// test idempotency
@@ -28,7 +27,7 @@ func TestMemoryRepository(t *testing.T) {
 }
 
 
-func addOrder(t *testing.T, repo *orders.MemoryRepository, id string) *order_domain.Order {
+func addOrder(t *testing.T, repo *MemoryRepository, id string) *order_domain.Order {
 	productPrice, err := price.NewPrice(10, "USD")
 	assert.NoError(t, err)
 

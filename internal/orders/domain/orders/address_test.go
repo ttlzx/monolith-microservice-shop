@@ -1,10 +1,9 @@
-package orders_test
+package orders
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
 )
 
 func TestNewAddress(t *testing.T) {
@@ -32,7 +31,7 @@ func TestNewAddress(t *testing.T) {
 
 	for _, c := range testCases {
 		t.Run(c.TestName, func(t *testing.T) {
-			address, err := orders.NewAddress(c.Name, c.Street, c.City, c.PostCode, c.Country)
+			address, err := NewAddress(c.Name, c.Street, c.City, c.PostCode, c.Country)
 
 			if c.ExpectedErr {
 				assert.Error(t, err)

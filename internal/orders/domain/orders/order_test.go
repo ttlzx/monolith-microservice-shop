@@ -1,17 +1,16 @@
-package orders_test
+package orders
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
 )
 
 func TestNewOrder(t *testing.T) {
 	orderProduct, orderAddress := createOrderContent(t)
 
-	testOrder, err := orders.NewOrder("1", orderProduct, orderAddress)
+	testOrder, err := NewOrder("1", orderProduct, orderAddress)
 	assert.NoError(t, err)
 
 	assert.EqualValues(t, orderProduct, testOrder.Product())
@@ -22,14 +21,14 @@ func TestNewOrder(t *testing.T) {
 func TestNewOrder_empty_id(t *testing.T) {
 	orderProduct, orderAddress := createOrderContent(t)
 
-	_, err := orders.NewOrder("", orderProduct, orderAddress)
-	assert.EqualValues(t, orders.ErrEmptyOrderID, err)
+	_, err := NewOrder("", orderProduct, orderAddress)
+	assert.EqualValues(t, ErrEmptyOrderID, err)
 }
 
 func TestOrder_MarkAsPaid(t *testing.T) {
 	orderProduct, orderAddress := createOrderContent(t)
 
-	testOrder, err := orders.NewOrder("1", orderProduct, orderAddress)
+	testOrder, err := NewOrder("1", orderProduct, orderAddress)
 	assert.NoError(t, err)
 
 	assert.False(t, testOrder.Paid())
@@ -37,14 +36,14 @@ func TestOrder_MarkAsPaid(t *testing.T) {
 	assert.True(t, testOrder.Paid())
 }
 
-func createOrderContent(t *testing.T) (orders.Product, orders.Address) {
+func createOrderContent(t *testing.T) (Product, Address) {
 	productPrice, err := price.NewPrice(10, "USD")
 	assert.NoError(t, err)
 
-	orderProduct, err := orders.NewProduct("1", "foo", productPrice)
+	orderProduct, err := NewProduct("1", "foo", productPrice)
 	assert.NoError(t, err)
 
-	orderAddress, err := orders.NewAddress("test", "test", "test", "test", "test")
+	orderAddress, err := NewAddress("test", "test", "test", "test", "test")
 	assert.NoError(t, err)
 
 	return orderProduct, orderAddress

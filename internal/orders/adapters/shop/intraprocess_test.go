@@ -1,4 +1,4 @@
-package shop_test
+package shop
 
 import (
 	"testing"
@@ -6,7 +6,6 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
 	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
-	"github.com/ttlzx/monolith-microservice-shop/internal/orders/infrastructure/shop"
 	"github.com/ttlzx/monolith-microservice-shop/internal/shop/interfaces/private/intraprocess"
 )
 
@@ -17,7 +16,7 @@ func TestOrderProductFromShopProduct(t *testing.T) {
 		"desc",
 		price.NewPriceP(42, "EUR"),
 	}
-	orderProduct, err := shop.OrderProductFromIntraprocess(shopProduct)
+	orderProduct, err := OrderProductFromIntraprocess(shopProduct)
 	assert.NoError(t, err)
 
 	expectedOrderProduct, err := orders.NewProduct("123", "name", price.NewPriceP(42, "EUR"))

@@ -44,7 +44,7 @@ type productsResource struct {
 func (p productsResource) GetAll(w http.ResponseWriter, r *http.Request) {
 	products, err := p.readModel.AllProducts()
 	if err != nil {
-		_ = render.Render(w, r, common_http.Errinternal/(err))
+		_ = render.Render(w, r, common_http.Errinternal(err))
 		return
 	}
 

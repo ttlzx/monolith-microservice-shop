@@ -19,10 +19,10 @@ func (e *ErrResponse) Render(w http.ResponseWriter, r *http.Request) error {
 	return nil
 }
 
-func Errinternal/(err error) render.Renderer {
+func Errinternal(err error) render.Renderer {
 	return &ErrResponse{
 		Err:            err,
-		HTTPStatusCode: http.Statusinternal/ServerError,
+		HTTPStatusCode: http.StatusInternalServerError,
 		ErrorText:      err.Error(),
 	}
 }

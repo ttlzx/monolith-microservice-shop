@@ -1,11 +1,10 @@
-package products_test
+package products
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlzx/monolith-microservice-shop/internal/shop/domain/products"
 )
 
 func TestNewProduct(t *testing.T) {
@@ -15,7 +14,7 @@ func TestNewProduct(t *testing.T) {
 	testCases := []struct {
 		TestName string
 
-		ID          products.ID
+		ID          ID
 		Name        string
 		Description string
 		Price       price.Price
@@ -36,7 +35,7 @@ func TestNewProduct(t *testing.T) {
 			Description: "bar",
 			Price:       testPrice,
 
-			ExpectedErr: products.ErrEmptyID,
+			ExpectedErr: ErrEmptyID,
 		},
 		{
 			TestName:    "empty_name",
@@ -45,13 +44,13 @@ func TestNewProduct(t *testing.T) {
 			Description: "bar",
 			Price:       testPrice,
 
-			ExpectedErr: products.ErrEmptyName,
+			ExpectedErr: ErrEmptyName,
 		},
 	}
 
 	for _, c := range testCases {
 		t.Run(c.TestName, func(t *testing.T) {
-			_, err := products.NewProduct(c.ID, c.Name, c.Description, c.Price)
+			_, err := NewProduct(c.ID, c.Name, c.Description, c.Price)
 			assert.EqualValues(t, c.ExpectedErr, err)
 		})
 	}

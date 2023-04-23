@@ -27,7 +27,7 @@ func (o ordersResource) PostPaid(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := o.service.MarkOrderAsPaid(cmd); err != nil {
-		_ = render.Render(w, r, common_http.Errinternal/(err))
+		_ = render.Render(w, r, common_http.Errinternal(err))
 		return
 	}
 

@@ -36,7 +36,7 @@ func (o ordersResource) Post(w http.ResponseWriter, r *http.Request) {
 		Address:   application.PlaceOrderCommandAddress(req.Address),
 	}
 	if err := o.service.PlaceOrder(cmd); err != nil {
-		_ = render.Render(w, r, common_http.Errinternal/(err))
+		_ = render.Render(w, r, common_http.Errinternal(err))
 		return
 	}
 

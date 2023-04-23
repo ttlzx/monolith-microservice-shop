@@ -41,7 +41,7 @@ func (p productsResource) Get(w http.ResponseWriter, r *http.Request) {
 	product, err := p.repo.ByID(products_domain.ID(chi.URLParam(r, "id")))
 
 	if err != nil {
-		_ = render.Render(w, r, common_http.Errinternal/(err))
+		_ = render.Render(w, r, common_http.Errinternal(err))
 		return
 	}
 

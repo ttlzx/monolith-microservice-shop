@@ -1,4 +1,4 @@
-package products_test
+package products
 
 import (
 	"testing"
@@ -6,11 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
 	products_domain "github.com/ttlzx/monolith-microservice-shop/internal/shop/domain/products"
-	"github.com/ttlzx/monolith-microservice-shop/internal/shop/infrastructure/products"
 )
 
 func TestMemoryRepository(t *testing.T) {
-	repo := products.NewMemoryRepository()
+	repo := NewMemoryRepository()
 
 	assertAllProducts(t, repo, []products_domain.Product{})
 
@@ -31,14 +30,14 @@ func TestMemoryRepository(t *testing.T) {
 	assert.EqualValues(t, *product2, *repoProduct2)
 }
 
-func assertAllProducts(t *testing.T, repo *products.MemoryRepository, expectedProducts []products_domain.Product) {
+func assertAllProducts(t *testing.T, repo *MemoryRepository, expectedProducts []products_domain.Product) {
 	products, err := repo.AllProducts()
 
 	assert.EqualValues(t, expectedProducts, products)
 	assert.NoError(t, err)
 }
 
-func addProduct(t *testing.T, repo *products.MemoryRepository, id string) *products_domain.Product {
+func addProduct(t *testing.T, repo *MemoryRepository, id string) *products_domain.Product {
 	price, err := price.NewPrice(42, "USD")
 	assert.NoError(t, err)
 
