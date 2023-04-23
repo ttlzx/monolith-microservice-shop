@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
 )
 
 func TestNewPrice(t *testing.T) {

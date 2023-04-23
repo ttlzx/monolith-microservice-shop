@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/infrastructure/shop"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/shop/interfaces/private/intraprocess"
+	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/infrastructure/shop"
+	"github.com/ttlzx/monolith-microservice-shop/internal/shop/interfaces/private/intraprocess"
 )
 
 func TestOrderProductFromShopProduct(t *testing.T) {

@@ -3,7 +3,7 @@ package orders
 import (
 	"errors"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
 )
 
 type ProductID string

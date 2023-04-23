@@ -6,8 +6,8 @@ import (
 	"log"
 
 	"github.com/streadway/amqp"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/payments/application"
+	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlzx/monolith-microservice-shop/internal/payments/application"
 )
 
 type OrderToProcessView struct {

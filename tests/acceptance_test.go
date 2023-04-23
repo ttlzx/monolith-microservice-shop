@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
-	orders_http_interface "github.com/ttlinzexin/monolith-microservice-shop/internal/orders/interfaces/public/http"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
+	orders_http_interface "github.com/ttlzx/monolith-microservice-shop/internal/orders/interfaces/public/http"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

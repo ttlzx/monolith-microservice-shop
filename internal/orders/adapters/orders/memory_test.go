@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
-	order_domain "github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/infrastructure/orders"
+	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
+	order_domain "github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/infrastructure/orders"
 )
 
 func TestMemoryRepository(t *testing.T) {

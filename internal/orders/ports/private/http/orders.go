@@ -5,9 +5,9 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/render"
-	common_http "github.com/ttlinzexin/monolith-microservice-shop/internal/common/http"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/application"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
+	common_http "github.com/ttlzx/monolith-microservice-shop/internal/common/http"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/application"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
 )
 
 func AddRoutes(router *chi.Mux, service application.OrdersService, repository orders.Repository) {

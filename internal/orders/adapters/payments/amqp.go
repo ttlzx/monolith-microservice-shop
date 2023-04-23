@@ -6,9 +6,9 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/streadway/amqp"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
-	payments_amqp_interface "github.com/ttlinzexin/monolith-microservice-shop/internal/payments/interfaces/amqp"
+	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
+	payments_amqp_interface "github.com/ttlzx/monolith-microservice-shop/internal/payments/interfaces/amqp"
 )
 
 type AMQPService struct {

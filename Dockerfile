@@ -2,7 +2,7 @@ FROM golang:1.9
 
 RUN go get github.com/golang/dep/cmd/dep
 
-WORKDIR /go/src/github.com/ttlinzexin/monolith-microservice-shop
+WORKDIR /go/src/github.com/ttlzx/monolith-microservice-shop
 COPY . .
 
 RUN dep ensure

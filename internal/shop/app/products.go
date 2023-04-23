@@ -2,8 +2,8 @@ package application
 
 import (
 	"github.com/pkg/errors"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/shop/domain/products"
+	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlzx/monolith-microservice-shop/internal/shop/domain/products"
 )
 
 type productReadModel interface {

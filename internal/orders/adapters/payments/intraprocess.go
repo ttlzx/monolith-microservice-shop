@@ -1,9 +1,9 @@
 package payments
 
 import (
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
-	"github.com/ttlinzexin/monolith-microservice-shop/internal/payments/interfaces/intraprocess"
+	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
+	"github.com/ttlzx/monolith-microservice-shop/internal/payments/interfaces/intraprocess"
 )
 
 type IntraprocessService struct {
