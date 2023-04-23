@@ -3,12 +3,12 @@ package http
 import (
 	"net/http"
 
-	common_http "github.com/ttlinzexin/monolith-microservice-shop/pkg/common/http"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/application"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/domain/orders"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/render"
-	"github.com/satori/go.uuid"
+	"github.com/gofrs/uuid"
+	common_http "github.com/ttlinzexin/monolith-microservice-shop/internal/common/http"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/application"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
 )
 
 func AddRoutes(router *chi.Mux, service application.OrdersService, repository orders.Repository) {
@@ -36,7 +36,7 @@ func (o ordersResource) Post(w http.ResponseWriter, r *http.Request) {
 		Address:   application.PlaceOrderCommandAddress(req.Address),
 	}
 	if err := o.service.PlaceOrder(cmd); err != nil {
-		_ = render.Render(w, r, common_http.ErrInternal(err))
+		_ = render.Render(w, r, common_http.Errinternal/(err))
 		return
 	}
 

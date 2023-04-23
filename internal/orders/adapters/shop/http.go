@@ -6,10 +6,10 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/domain/orders"
-	http_interface "github.com/ttlinzexin/monolith-microservice-shop/pkg/shop/interfaces/private/http"
 	"github.com/pkg/errors"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
+	http_interface "github.com/ttlinzexin/monolith-microservice-shop/internal/shop/interfaces/private/http"
 )
 
 type HTTPClient struct {

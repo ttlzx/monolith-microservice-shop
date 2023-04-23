@@ -5,10 +5,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/cmd"
-	payments_app "github.com/ttlinzexin/monolith-microservice-shop/pkg/payments/application"
-	payments_infra_orders "github.com/ttlinzexin/monolith-microservice-shop/pkg/payments/infrastructure/orders"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/payments/interfaces/amqp"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/cmd"
+	payments_app "github.com/ttlinzexin/monolith-microservice-shop/internal/payments/application"
+	payments_infra_orders "github.com/ttlinzexin/monolith-microservice-shop/internal/payments/infrastructure/orders"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/payments/interfaces/amqp"
 )
 
 func main() {

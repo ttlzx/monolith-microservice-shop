@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
 )
 
 type ordersService interface {

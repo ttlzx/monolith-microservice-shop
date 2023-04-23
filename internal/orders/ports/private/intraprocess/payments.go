@@ -1,8 +1,8 @@
 package intraprocess
 
 import (
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/application"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/domain/orders"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/application"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
 )
 
 type OrdersInterface struct {

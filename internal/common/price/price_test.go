@@ -3,8 +3,8 @@ package price_test
 import (
 	"testing"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
 	"github.com/stretchr/testify/assert"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
 )
 
 func TestNewPrice(t *testing.T) {

@@ -1,6 +1,6 @@
 package orders
 
-import "github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/domain/orders"
+import "github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
 
 type MemoryRepository struct {
 	orders []orders.Order

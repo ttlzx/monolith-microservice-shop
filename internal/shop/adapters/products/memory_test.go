@@ -3,10 +3,10 @@ package products_test
 import (
 	"testing"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
-	products_domain "github.com/ttlinzexin/monolith-microservice-shop/pkg/shop/domain/products"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/shop/infrastructure/products"
 	"github.com/stretchr/testify/assert"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
+	products_domain "github.com/ttlinzexin/monolith-microservice-shop/internal/shop/domain/products"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/shop/infrastructure/products"
 )
 
 func TestMemoryRepository(t *testing.T) {

@@ -3,8 +3,8 @@ package orders_test
 import (
 	"testing"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/domain/orders"
 	"github.com/stretchr/testify/assert"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
 )
 
 func TestNewAddress(t *testing.T) {

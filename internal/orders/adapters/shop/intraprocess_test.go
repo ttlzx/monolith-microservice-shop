@@ -3,11 +3,11 @@ package shop_test
 import (
 	"testing"
 
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/domain/orders"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/infrastructure/shop"
-	"github.com/ttlinzexin/monolith-microservice-shop/pkg/shop/interfaces/private/intraprocess"
 	"github.com/stretchr/testify/assert"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/common/price"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/domain/orders"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/orders/infrastructure/shop"
+	"github.com/ttlinzexin/monolith-microservice-shop/internal/shop/interfaces/private/intraprocess"
 )
 
 func TestOrderProductFromShopProduct(t *testing.T) {
