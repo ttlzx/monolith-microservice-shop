@@ -3,8 +3,8 @@ package intraprocess
 import (
 	"testing"
 
-	"github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/common/price"
-	"github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/shop/domain/products"
+	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
+	"github.com/ttlinzexin/monolith-microservice-shop/pkg/shop/domain/products"
 	"github.com/stretchr/testify/assert"
 )
 

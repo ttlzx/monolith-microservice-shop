@@ -1,7 +1,7 @@
 package shop
 
 import (
-	shop_app "github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/shop/application"
+	shop_app "github.com/ttlinzexin/monolith-microservice-shop/pkg/shop/application"
 )
 
 func LoadShopFixtures(productsService shop_app.ProductsService) error {

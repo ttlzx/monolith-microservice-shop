@@ -3,9 +3,9 @@ package orders_test
 import (
 	"testing"
 
-	"github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/common/price"
-	order_domain "github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/orders/domain/orders"
-	"github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/orders/infrastructure/orders"
+	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
+	order_domain "github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/domain/orders"
+	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/infrastructure/orders"
 	"github.com/stretchr/testify/assert"
 )
 

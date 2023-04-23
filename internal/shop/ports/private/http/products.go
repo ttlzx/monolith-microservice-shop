@@ -3,9 +3,9 @@ package http
 import (
 	"net/http"
 
-	common_http "github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/common/http"
-	"github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/common/price"
-	products_domain "github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/shop/domain/products"
+	common_http "github.com/ttlinzexin/monolith-microservice-shop/pkg/common/http"
+	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
+	products_domain "github.com/ttlinzexin/monolith-microservice-shop/pkg/shop/domain/products"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/render"
 )

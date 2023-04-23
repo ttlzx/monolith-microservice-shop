@@ -6,9 +6,9 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/common/price"
-	"github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/orders/domain/orders"
-	http_interface "github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/shop/interfaces/private/http"
+	"github.com/ttlinzexin/monolith-microservice-shop/pkg/common/price"
+	"github.com/ttlinzexin/monolith-microservice-shop/pkg/orders/domain/orders"
+	http_interface "github.com/ttlinzexin/monolith-microservice-shop/pkg/shop/interfaces/private/http"
 	"github.com/pkg/errors"
 )
 
