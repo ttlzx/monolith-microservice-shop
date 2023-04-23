@@ -17,5 +17,3 @@ require (
 	github.com/streadway/amqp v1.0.0
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace github.com/ttlzx/monolith-microservice-shop/internal/common => ../common/

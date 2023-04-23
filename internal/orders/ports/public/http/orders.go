@@ -30,8 +30,9 @@ func (o ordersResource) Post(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	u, _ := uuid.NewV1()
 	cmd := app.PlaceOrderCommand{
-		OrderID:   orders.ID(uuid.NewV1().String()),
+		OrderID:   orders.ID(u.String()),
 		ProductID: req.ProductID,
 		Address:   app.PlaceOrderCommandAddress(req.Address),
 	}
