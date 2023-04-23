@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/go-chi/chi"
-	"github.com/ttlzx/monolish-microservice-shop/internal//shop"
+	"github.com/ttlzx/monolith-microservice-shop/internal//shop"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/cmd"
 	orders_app "github.com/ttlzx/monolith-microservice-shop/internal/orders/application"
 	orders_infra_orders "github.com/ttlzx/monolith-microservice-shop/internal/orders/infrastructure/orders"

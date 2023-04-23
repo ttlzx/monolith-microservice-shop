@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlzx/monolith-microservice-shop/internal/payments/application"
+	"github.com/ttlzx/monolith-microservice-shop/internal/payments/app"
 )
 
 type OrderToProcess struct {
@@ -15,12 +15,12 @@ type OrderToProcess struct {
 
 type PaymentsInterface struct {
 	orders            <-chan OrderToProcess
-	service           application.PaymentsService
+	service           app.PaymentsService
 	orderProcessingWg *sync.WaitGroup
 	runEnded          chan struct{}
 }
 
-func NewPaymentsInterface(orders <-chan OrderToProcess, service application.PaymentsService) PaymentsInterface {
+func NewPaymentsInterface(orders <-chan OrderToProcess, service app.PaymentsService) PaymentsInterface {
 	return PaymentsInterface{
 		orders,
 		service,

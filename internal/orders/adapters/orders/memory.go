@@ -1,7 +1,7 @@
 package orders
 
 import (
-	"github.com/ttlzx/monolish-microservice-shop/internal/orders/domain/orders"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
 )
 
 type MemoryRepository struct {

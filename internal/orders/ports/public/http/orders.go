@@ -7,18 +7,18 @@ import (
 	"github.com/go-chi/render"
 	"github.com/gofrs/uuid"
 	common_http "github.com/ttlzx/monolith-microservice-shop/internal/common/http"
-	"github.com/ttlzx/monolith-microservice-shop/internal/orders/application"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/app"
 	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
 )
 
-func AddRoutes(router *chi.Mux, service application.OrdersService, repository orders.Repository) {
+func AddRoutes(router *chi.Mux, service app.OrdersService, repository orders.Repository) {
 	resource := ordersResource{service, repository}
 	router.Post("/orders", resource.Post)
 	router.Get("/orders/{id}/paid", resource.GetPaid)
 }
 
 type ordersResource struct {
-	service application.OrdersService
+	service app.OrdersService
 
 	repository orders.Repository
 }
@@ -30,10 +30,10 @@ func (o ordersResource) Post(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	cmd := application.PlaceOrderCommand{
+	cmd := app.PlaceOrderCommand{
 		OrderID:   orders.ID(uuid.NewV1().String()),
 		ProductID: req.ProductID,
-		Address:   application.PlaceOrderCommandAddress(req.Address),
+		Address:   app.PlaceOrderCommandAddress(req.Address),
 	}
 	if err := o.service.PlaceOrder(cmd); err != nil {
 		_ = render.Render(w, r, common_http.Errinternal(err))

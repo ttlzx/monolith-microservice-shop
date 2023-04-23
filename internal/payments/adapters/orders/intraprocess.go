@@ -1,6 +1,6 @@
 package orders
 
-import "github.com/ttlzx/monolith-microservice-shop/internal/orders/interfaces/private/intraprocess"
+import "github.com/ttlzx/monolith-microservice-shop/internal/orders/ports/private/intraprocess"
 
 type IntraprocessService struct {
 	paymentsInterface intraprocess.OrdersInterface

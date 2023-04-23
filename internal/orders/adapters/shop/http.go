@@ -9,7 +9,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
 	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
-	http_interface "github.com/ttlzx/monolith-microservice-shop/internal/shop/interfaces/private/http"
+	http_interface "github.com/ttlzx/monolith-microservice-shop/internal/shop/ports/private/http"
 )
 
 type HTTPClient struct {

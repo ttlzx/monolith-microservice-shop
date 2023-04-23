@@ -3,10 +3,10 @@ package http
 import (
 	"net/http"
 
-	"github.com/ThreeDotsLabs/monolith-microservice-shop/pkg/orders/app"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/render"
 	common_http "github.com/ttlzx/monolith-microservice-shop/internal/common/http"
+	"github.com/ttlzx/monolith-microservice-shop/internal/orders/app"
 	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
 )
 

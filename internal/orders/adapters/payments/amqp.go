@@ -8,7 +8,7 @@ import (
 	"github.com/streadway/amqp"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
 	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
-	payments_amqp_interface "github.com/ttlzx/monolith-microservice-shop/internal/payments/interfaces/amqp"
+	payments_amqp_interface "github.com/ttlzx/monolith-microservice-shop/internal/payments/ports/amqp"
 )
 
 type AMQPService struct {

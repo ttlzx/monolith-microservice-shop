@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
 	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
-	"github.com/ttlzx/monolith-microservice-shop/internal/shop/interfaces/private/intraprocess"
+	"github.com/ttlzx/monolith-microservice-shop/internal/shop/ports/private/intraprocess"
 )
 
 func TestOrderProductFromShopProduct(t *testing.T) {

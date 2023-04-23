@@ -2,7 +2,7 @@ package shop
 
 import (
 	"github.com/ttlzx/monolith-microservice-shop/internal/orders/domain/orders"
-	"github.com/ttlzx/monolith-microservice-shop/internal/shop/interfaces/private/intraprocess"
+	"github.com/ttlzx/monolith-microservice-shop/internal/shop/ports/private/intraprocess"
 )
 
 type IntraprocessService struct {

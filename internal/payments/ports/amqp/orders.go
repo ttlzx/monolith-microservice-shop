@@ -7,7 +7,7 @@ import (
 
 	"github.com/streadway/amqp"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/price"
-	"github.com/ttlzx/monolith-microservice-shop/internal/payments/application"
+	"github.com/ttlzx/monolith-microservice-shop/internal/payments/app"
 )
 
 type OrderToProcessView struct {
@@ -25,10 +25,10 @@ type PaymentsInterface struct {
 	queue   amqp.Queue
 	channel *amqp.Channel
 
-	service application.PaymentsService
+	service app.PaymentsService
 }
 
-func NewPaymentsInterface(url string, queueName string, service application.PaymentsService) (PaymentsInterface, error) {
+func NewPaymentsInterface(url string, queueName string, service app.PaymentsService) (PaymentsInterface, error) {
 	conn, err := amqp.Dial(url)
 	if err != nil {
 		return PaymentsInterface{}, err
