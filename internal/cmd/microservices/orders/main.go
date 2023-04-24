@@ -8,12 +8,12 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/ttlzx/monolith-microservice-shop/internal/common/cmd"
-	orders_app "github.com/ttlzx/monolith-microservice-shop/internal/orders/application"
-	orders_infra_orders "github.com/ttlzx/monolith-microservice-shop/internal/orders/infrastructure/orders"
-	orders_infra_payments "github.com/ttlzx/monolith-microservice-shop/internal/orders/infrastructure/payments"
-	orders_infra_product "github.com/ttlzx/monolith-microservice-shop/internal/orders/infrastructure/shop"
-	orders_private_http "github.com/ttlzx/monolith-microservice-shop/internal/orders/interfaces/private/http"
-	orders_public_http "github.com/ttlzx/monolith-microservice-shop/internal/orders/interfaces/public/http"
+	orders_infra_orders "github.com/ttlzx/monolith-microservice-shop/internal/orders/adapters/orders"
+	orders_infra_payments "github.com/ttlzx/monolith-microservice-shop/internal/orders/adapters/payments"
+	orders_infra_product "github.com/ttlzx/monolith-microservice-shop/internal/orders/adapters/shop"
+	orders_app "github.com/ttlzx/monolith-microservice-shop/internal/orders/app"
+	orders_private_http "github.com/ttlzx/monolith-microservice-shop/internal/orders/ports/private/http"
+	orders_public_http "github.com/ttlzx/monolith-microservice-shop/internal/orders/ports/public/http"
 )
 
 func main() {
